@@ -1,6 +1,7 @@
 {
     "env": {
-        "es6": true
+        "es6": true,
+        "browser": true
     },
     "extends": [
         "plugin:react/recommended",
@@ -29,29 +30,41 @@
         "@typescript-eslint"
     ],
     "rules": {
+        "import/no-duplicates": "off",
+        "camelcase": "off",
         "arrow-parens": "off",
         "react/jsx-props-no-spreading": "off",
         "react/prop-types": "off",
         "linebreak-style": "off",
-        "prettier/prettier": ["error", {
-            "endOfLine": "auto"
-        }],
+        "prettier/prettier": [
+            "error",
+            {
+                "endOfLine": "auto"
+            }
+        ],
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn",
-        "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [
+                    ".tsx"
+                ]
+            }
+        ],
         "import/prefer-default-export": "off",
         "import/extensions": [
             "error",
             "ignorePackages",
             {
-              "ts": "never",
-              "tsx": "never"
+                "ts": "never",
+                "tsx": "never"
             }
         ]
     },
     "settings": {
         "import/resolver": {
-          "typescript": {}
+            "typescript": {}
         }
     }
 }
